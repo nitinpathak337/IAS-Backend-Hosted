@@ -51,7 +51,11 @@ app.listen(port, async() => {
      connectDB();
   });
 
-
+//
+app.get("/",async(req,res)=>{
+  res.setHeader("Access-Control-Allow-Credentials","true");
+  res.send("API is running");
+});
 
 //login api 
 app.post("/login",async(req,res)=>{
